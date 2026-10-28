@@ -83,7 +83,7 @@ git --version
 Replace `YOUR_GITHUB_USERNAME` with your GitHub username.
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/ats-screening-api.git
+git clone https://github.com/SaDaMQureshi/ats-screening-api.git
 ```
 
 Navigate into the project directory:
