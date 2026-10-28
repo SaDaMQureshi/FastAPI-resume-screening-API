@@ -1,0 +1,68 @@
+================================================================
+POSTMAN INPUT FOR ATS SCREENING API
+================================================================
+
+API ENDPOINT:
+POST http://localhost:8000/screen
+
+BODY TYPE: form-data
+
+================================================================
+FORM FIELDS TO FILL:
+================================================================
+
+Field: job_title
+Value: ASP.NET Core MVC Developer
+
+----------------------------------------------------------------
+Field: job_description
+Value: We are looking for an ASP.NET Core MVC developer with experience building web applications, implementing CRUD operations, designing REST APIs, and working with relational databases.
+
+----------------------------------------------------------------
+Field: required_skills
+Value: ASP.NET Core MVC, C#, MySQL, SQL Server, Entity Framework Core, REST APIs, HTML, CSS, JavaScript
+
+----------------------------------------------------------------
+Field: document_paths
+Value: file:///E:/My%20Data/Project/CVs/resume1.pdf,file:///E:/My%20Data/Project/CVs/resume2.pdf
+
+Note: Replace the paths above with your actual CV file paths.
+Use comma-separated list for multiple documents.
+Use %20 for spaces in file paths.
+
+================================================================
+SUPPORTED FILE FORMATS:
+================================================================
+- PDF (.pdf)
+- Word Document (.docx)
+- Image (.png, .jpg, .jpeg)
+
+================================================================
+PATH FORMATS SUPPORTED:
+================================================================
+
+1. LOCAL FILES (recommended for testing):
+   file:///E:/My%20Data/Project/CVs/resume.pdf
+   file:///C:/Users/Documents/cv.docx
+
+2. HTTP/HTTPS URLs:
+   https://example.com/resume.pdf
+   https://website.com/documents/cv.docx
+
+================================================================
+IMPORTANT NOTES:
+================================================================
+- For local paths, use forward slashes (/) even on Windows
+- Replace spaces with %20 (e.g., "My Data" becomes "My%20Data")
+- The API will download/read the files, process them, and return results
+- No files are saved permanently - everything is processed in memory
+
+
+Ran the following command to start the server:
+python -m uvicorn app:app --reload
+
+Link to the API:
+http://localhost:8000/screen
+
+
+python -m uvicorn app-2:app --host 0.0.0.0 --port 8001

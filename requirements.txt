@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+httpx
+pymupdf
+pytesseract
+pillow
+python-docx
+ollama
+pydantic
